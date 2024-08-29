@@ -32,7 +32,7 @@
 &kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T                      &kp Y      &kp U      &kp I      &kp O       &kp P      &lt MEDIA BSLH
 &kp GRAVE  &kp A      &kp S     &kp D     &kp F      &kp G                      &kp H      &kp J      &kp K      &kp L       &kp SEMI   &kp SQT
 &kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B      &mkp LCLK    &mkp LCLK  &kp N      &kp M      &kp COMMA  &kp PERIOD  &kp SLASH  &kp RET
-&kp LCTRL  &mo EXTRA  &kp LALT  &kp LGUI  &mo LOWER  &kp SPACE  &to INVERT    &to INVERT  &kp SPACE  &mo RAISE  &kp LEFT   &kp UP      &kp DOWN   &kp RIGHT
+&kp LCTRL  &mo EXTRA  &kp LALT  &kp LGUI  &mo LOWER  &kp SPACE  &mo INVERT    &mo INVERT  &kp SPACE  &mo RAISE  &kp LEFT   &kp UP      &kp DOWN   &kp RIGHT
             >;
         };
 
@@ -71,8 +71,8 @@
 &trans  &none   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp BSPC                     &none   &none       &none   &none   &none   &trans
 &trans  &none   &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp DEL                     &none   &none       &none   &none   &none   &trans
 &trans  &none   &kp KP_N1  &kp KP_N2  &kp KP_N3  &none                     &none   &none       &none   &none   &none   &trans
-&trans  &none   &none      &kp KP_N0  &none      &none   &trans     &trans   &none   &none       &none   &none   &none   &trans
-&trans  &trans  &trans     &trans     &trans     &trans  &mkp MCLK    &mkp MCLK  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &none   &none      &kp KP_N0  &none      &mkp RCLK   &mkp MCLK     &mkp MCLK   &mkp RCLK   &none       &none   &none   &none   &trans
+&trans  &trans  &trans     &trans     &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -81,18 +81,18 @@
 &trans  &none   &none   &none   &none       &none                     &none   &kp KP_N7  &kp KP_N8  &kp KP_N9  &none   &trans
 &trans  &none   &none   &none   &none       &none                     &none   &kp KP_N4  &kp KP_N5  &kp KP_N6  &none   &trans
 &trans  &none   &none   &none   &none       &none                     &none   &kp KP_N1  &kp KP_N2  &kp KP_N3  &none   &trans
-&trans  &none   &none   &none   &none       &none   &trans     &trans   &none   &none      &kp KP_N0  &none      &none   &trans
-&trans  &trans  &trans     &trans     &trans     &trans  &mkp MCLK    &mkp MCLK  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &none   &none   &none   &none       &none   &mkp RCLK   &mkp MCLK     &mkp MCLK   &mkp RCLK      &kp KP_N0  &none      &none   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans            &trans      &trans        &trans        &trans
             >;
         };
 
         invert_layer {
-            bindings = <
+            bindings = <;ze
 &kp N6     &kp N7     &kp N8     &kp N9      &kp N0     &lt INVERT_NEXT BSPC               &gresc     &kp N1     &kp N2    &kp N3    &kp N4     &kp N5                     
 &kp Y      &kp U      &kp I      &kp O       &kp P      &lt INVERT_MEDIA BSLH          &kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T                      
  &kp H      &kp J      &kp K      &kp L       &kp SEMI   &kp SQT                    &kp GRAVE  &kp A      &kp S     &kp D     &kp F      &kp G                     
 &kp N      &kp M      &kp COMMA  &kp PERIOD  &kp SLASH  &kp RET &mkp LCLK    &mkp LCLK  &kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B     
-&kp SPACE  &mo INVERT_RAISE  &kp LEFT   &kp UP      &kp DOWN   &kp RIGHT   &to DEFAULT    &to DEFAULT   &kp LCTRL  &mo INVERT_EXTRA  &kp LALT  &kp LGUI  &mo INVERT_LOWER  &kp SPACE
+&kp SPACE  &mo INVERT_RAISE  &kp LEFT   &kp UP      &kp DOWN   &kp RIGHT   &trans    &trans   &kp LCTRL  &mo INVERT_EXTRA  &kp LALT  &kp LGUI  &mo INVERT_LOWER  &kp SPACE
             >;
         };
 
@@ -131,8 +131,8 @@
 &none   &none       &none   &none   &none   &trans &trans  &none   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp BSPC                     
 &none   &none       &none   &none   &none   &trans &trans  &none   &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp DEL                     
 &none   &none       &none   &none   &none   &trans &trans  &none   &kp KP_N1  &kp KP_N2  &kp KP_N3  &none                     
-&none   &none       &none   &none   &none   &trans    &trans     &trans    &trans  &none   &none      &kp KP_N0  &none      &none
-&trans  &trans  &trans     &trans     &trans     &trans  &mkp MCLK    &mkp MCLK  &trans  &trans  &trans  &trans  &trans  &trans
+&none   &none       &none   &none   &none   &mkp RCLK   &mkp MCLK     &mkp MCLK   &mkp RCLK  &none   &none      &kp KP_N0  &none      &none
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans            &trans      &trans        &trans        &trans
             >;
         };
 
@@ -141,8 +141,8 @@
 &none   &kp KP_N7  &kp KP_N8  &kp KP_N9  &none   &trans &trans  &none   &none   &none   &none       &none                     
 &none   &kp KP_N4  &kp KP_N5  &kp KP_N6  &none   &trans &trans  &none   &none   &none   &none       &none                     
 &none   &kp KP_N1  &kp KP_N2  &kp KP_N3  &none   &trans &trans  &none   &none   &none   &none       &none                     
- &none   &none      &kp KP_N0  &none      &none   &trans    &trans     &trans  &trans  &none   &none   &none   &none       &none
-&trans  &trans  &trans     &trans     &trans     &trans  &mkp MCLK    &mkp MCLK  &trans  &trans  &trans  &trans  &trans  &trans
+ &none   &none      &kp KP_N0  &none      &none   &mkp RCLK   &mkp MCLK     &mkp MCLK   &mkp RCLK  &none   &none   &none   &none       &none
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans            &trans      &trans        &trans        &trans
             >;
         };
 
