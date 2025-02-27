@@ -145,74 +145,18 @@
             label = "PKRERUBY";
         };
 
-        uprruby: uprruby {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp FSLH &kp R &kp U &kp TAB &kp M &kp TAB>;
-            label = "UPRRUBY";
+        uproxyreply: uproxy {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = <&kp FSLH &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER &kp TAB &kp Q &kp TAB &kp T &kp TAB &kp M &kp TAB>;
+            label = "UPROXY";
         };
 
-        upmaddie: upmaddie {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp FSLH &kp M &kp A &kp TAB &kp M &kp TAB>;
-            label = "UPMADDIE";
-        };
-
-        upglimmer: upglimmer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp FSLH &kp G &kp L &kp TAB &kp M &kp TAB>;
-            label = "UPGLIMMER";
-        };
-
-        upmio: upmio {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp FSLH &kp M &kp I &kp TAB &kp M &kp TAB>;
-            label = "UPMIO";
-        };
-
-        upselphie: upselphie {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp FSLH &kp S &kp E &kp TAB &kp M &kp TAB>;
-            label = "UPSELPHIE";
-        };
-
-        urpruby: urpruby {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp FSLH &kp R &kp U &kp TAB &kp Q &kp TAB &kp T &kp TAB &kp M &kp TAB>;
-            label = "URPRUBY";
-        };
-
-        urpglimmer: urpglimmer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp FSLH &kp G &kp L &kp TAB &kp Q &kp TAB &kp T &kp TAB &kp M &kp TAB>;
-            label = "URPGLIMMER";
-        };
-
-        urpselphie: urpselphie {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp FSLH &kp S &kp E &kp TAB &kp Q &kp TAB &kp T &kp TAB &kp M &kp TAB>;
-            label = "URPSELPHIE";
-        };
-
-        urpmaddie: urpmaddie {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp FSLH &kp M &kp A &kp TAB &kp Q &kp TAB &kp T &kp TAB &kp M &kp TAB>;
-            label = "URPMADDIE";
-        };
-
-        urpmio: urpmio {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp FSLH &kp M &kp I &kp TAB &kp Q &kp TAB &kp T &kp TAB &kp M &kp TAB>;
-            label = "userproxy reply Mio";
+        uproxypost: uproxypost {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = <&kp FSLH &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER &kp TAB &kp M &kp TAB>;
+            label = "UPROXYPOST";
         };
     };
 
@@ -261,11 +205,11 @@
 
         lower_layer {
             bindings = <
-&trans  &none   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp BSPC                           &uprruby   &upmio   &upselphie   &upglimmer   &upmaddie   &trans
-&trans  &none   &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp DEL                            &urpruby   &urpmio  &urpselphie  &urpglimmer  &urpmaddie  &trans
-&trans  &none   &kp KP_N1  &kp KP_N2  &kp KP_N3  &none                              &none      &none    &none        &none        &none       &trans
-&mo 12  &none   &none      &kp KP_N0  &none      &mkp RCLK  &mkp MCLK    &mkp MCLK  &mkp RCLK  &none    &none        &none        &none       &trans
-&trans  &trans  &trans     &trans     &trans     &trans     &trans       &trans     &trans     &trans   &trans       &trans       &trans      &trans
+&trans  &none   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp BSPC                           &uproxypost R U   &uproxypost M I   &uproxypost S E   &uproxypost G L   &uproxypost M A   &trans
+&trans  &none   &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp DEL                            &uproxyreply R U  &uproxyreply M I  &uproxyreply S E  &uproxyreply G L  &uproxyreply M A  &trans
+&trans  &none   &kp KP_N1  &kp KP_N2  &kp KP_N3  &none                              &none             &none             &none             &none             &none             &trans
+&mo 12  &none   &none      &kp KP_N0  &none      &mkp RCLK  &mkp MCLK    &mkp MCLK  &mkp RCLK         &none             &none             &none             &none             &trans
+&trans  &trans  &trans     &trans     &trans     &trans     &trans       &trans     &trans            &trans            &trans            &trans            &trans            &trans
             >;
         };
 
