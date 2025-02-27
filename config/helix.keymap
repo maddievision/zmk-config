@@ -75,73 +75,38 @@
             label = "PKEDIT";
         };
 
-        pkproxy0: pkproxy0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp AMPS &kp N0 &kp RET>;
-            label = "PKPROXY0";
-        };
-
-        pkproxy9: pkproxy9 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp AMPS &kp N9 &kp RET>;
-            label = "PKPROXY9";
-        };
-
-        pkproxy8: pkproxy8 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp AMPS &kp N8 &kp RET>;
-            label = "PKPROXY8";
-        };
-
-        pkproxy7: pkproxy7 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp AMPS &kp N7 &kp RET>;
-            label = "PKPROXY7";
-        };
-
-        pkproxy6: pkproxy6 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp AMPS &kp N6 &kp RET>;
-            label = "PKPROXY6";
-        };
-
         pkremaddie: pkremaddie {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp P &kp K &kp SEMI &kp R &kp E &kp P &kp R &kp O &kp X &kp Y &kp SPACE &kp M &kp A &kp D &kp D &kp I &kp E &kp RET>;
+            bindings = <&pkreproxy &kp M &kp A &kp D &kp D &kp I &kp E &kp RET>;
             label = "PKREMADDIE";
         };
 
         pkreglimmer: pkreglimmer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp P &kp K &kp SEMI &kp R &kp E &kp P &kp R &kp O &kp X &kp Y &kp SPACE &kp G &kp L &kp I &kp M &kp M &kp E &kp R &kp RET>;
+            bindings = <&pkreproxy &kp G &kp L &kp I &kp M &kp M &kp E &kp R &kp RET>;
             label = "PKREGLIMMER";
         };
 
         pkreselphie: pkreselphie {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp P &kp K &kp SEMI &kp R &kp E &kp P &kp R &kp O &kp X &kp Y &kp SPACE &kp S &kp E &kp L &kp P &kp H &kp I &kp E &kp RET>;
+            bindings = <&pkreproxy &kp S &kp E &kp L &kp P &kp H &kp I &kp E &kp RET>;
             label = "PKRESELPHIE";
         };
 
         pkremio: pkremio {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp P &kp K &kp SEMI &kp R &kp E &kp P &kp R &kp O &kp X &kp Y &kp SPACE &kp M &kp I &kp O &kp RET>;
+            bindings = <&pkreproxy &kp M &kp I &kp O &kp RET>;
             label = "PKREMIO";
         };
 
         pkreruby: pkreruby {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp P &kp K &kp SEMI &kp R &kp E &kp P &kp R &kp O &kp X &kp Y &kp SPACE &kp R &kp U &kp B &kp Y &kp RET>;
+            bindings = <&pkreproxy &kp R &kp U &kp B &kp Y &kp RET>;
             label = "PKRERUBY";
         };
 
@@ -157,6 +122,27 @@
             #binding-cells = <2>;
             bindings = <&kp FSLH &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER &kp TAB &kp M &kp TAB>;
             label = "UPROXYPOST";
+        };
+
+        uproxyre: uproxyre {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = <&kp FSLH &kp R &kp E &kp P &kp R &kp O &kp X &kp Y &kp TAB &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
+            label = "UPROXYRE";
+        };
+
+        uproxyresel: uproxyresel {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&uproxyre S E &kp L>;
+            label = "UPROXYRESEL";
+        };
+
+        pkproxy: pkproxy {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp AMPERSAND &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "PKPROXY";
         };
     };
 
@@ -207,7 +193,7 @@
             bindings = <
 &trans  &kp F1   &kp F2   &kp F3   &trans  &kp BSPC                           &uproxypost R U   &uproxypost M I   &uproxypost S E   &uproxypost G L   &uproxypost M A   &trans
 &trans  &kp F4   &kp F5   &kp F6   &none   &kp DEL                            &uproxyreply R U  &uproxyreply M I  &uproxyreply S E  &uproxyreply G L  &uproxyreply M A  &trans
-&trans  &kp F7   &kp F8   &kp F9   &none   &none                              &none             &none             &none             &none             &none             &trans
+&trans  &kp F7   &kp F8   &kp F9   &none   &none                              &uproxyre R U     &uproxyre M I     &uproxyresel      &uproxyre G L     &uproxyre M A     &trans
 &mo 12  &kp F10  &kp F11  &kp F12  &none   &mkp RCLK  &mkp MCLK    &mkp MCLK  &mkp RCLK         &none             &none             &none             &none             &trans
 &trans  &trans   &trans   &trans   &trans  &trans     &trans       &trans     &trans            &trans            &trans            &trans            &trans            &trans
             >;
