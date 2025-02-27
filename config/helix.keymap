@@ -165,11 +165,11 @@
 
         default_layer {
             bindings = <
-&gresc     &kp N1     &kp N2    &kp N3    &kp N4     &kp N5                               &kp N6     &kp N7     &kp N8     &kp N9      &kp N0     &lt NEXT BSPC
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T                                &kp Y      &kp U      &kp I      &kp O       &kp P      &lt MEDIA BSLH
-&kp GRAVE  &kp A      &kp S     &kp D     &kp F      &kp G                                &kp H      &kp J      &kp K      &kp L       &kp SEMI   &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B      &mkp LCLK     &mkp LCLK   &kp N      &kp M      &kp COMMA  &kp PERIOD  &kp SLASH  &kp RET
-&kp LCTRL  &mo EXTRA  &kp LALT  &kp LGUI  &mo LOWER  &kp SPACE  &mo INVERT    &mo INVERT  &kp SPACE  &mo RAISE  &kp LEFT   &kp UP      &kp DOWN   &kp RIGHT
+&gresc     &kp N1     &kp N2    &kp N3    &kp N4     &kp N5                             &kp N6     &kp N7     &kp N8     &kp N9      &kp N0     &lt NEXT BSPC
+&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T                              &kp Y      &kp U      &kp I      &kp O       &kp P      &lt MEDIA BSLH
+&kp GRAVE  &kp A      &kp S     &kp D     &kp F      &kp G                              &kp H      &kp J      &kp K      &kp L       &kp SEMI   &kp SQT
+&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B      &mkp LCLK    &mkp LCLK  &kp N      &kp M      &kp COMMA  &kp PERIOD  &kp SLASH  &kp RET
+&kp LCTRL  &mo EXTRA  &kp LALT  &kp LGUI  &mo LOWER  &kp SPACE  &mkp RCLK    &mkp RCLK  &kp SPACE  &mo RAISE  &kp LEFT   &kp UP      &kp DOWN   &kp RIGHT
             >;
         };
 
@@ -205,11 +205,11 @@
 
         lower_layer {
             bindings = <
-&trans  &none   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp BSPC                           &uproxypost R U   &uproxypost M I   &uproxypost S E   &uproxypost G L   &uproxypost M A   &trans
-&trans  &none   &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp DEL                            &uproxyreply R U  &uproxyreply M I  &uproxyreply S E  &uproxyreply G L  &uproxyreply M A  &trans
-&trans  &none   &kp KP_N1  &kp KP_N2  &kp KP_N3  &none                              &none             &none             &none             &none             &none             &trans
-&mo 12  &none   &none      &kp KP_N0  &none      &mkp RCLK  &mkp MCLK    &mkp MCLK  &mkp RCLK         &none             &none             &none             &none             &trans
-&trans  &trans  &trans     &trans     &trans     &trans     &trans       &trans     &trans            &trans            &trans            &trans            &trans            &trans
+&trans  &kp F1   &kp F2   &kp F3   &trans  &kp BSPC                           &uproxypost R U   &uproxypost M I   &uproxypost S E   &uproxypost G L   &uproxypost M A   &trans
+&trans  &kp F4   &kp F5   &kp F6   &none   &kp DEL                            &uproxyreply R U  &uproxyreply M I  &uproxyreply S E  &uproxyreply G L  &uproxyreply M A  &trans
+&trans  &kp F7   &kp F8   &kp F9   &none   &none                              &none             &none             &none             &none             &none             &trans
+&mo 12  &kp F10  &kp F11  &kp F12  &none   &mkp RCLK  &mkp MCLK    &mkp MCLK  &mkp RCLK         &none             &none             &none             &none             &trans
+&trans  &trans   &trans   &trans   &trans  &trans     &trans       &trans     &trans            &trans            &trans            &trans            &trans            &trans
             >;
         };
 
